@@ -69,6 +69,9 @@ Este repositório constrói um **harness reutilizável do Claude Code** para os 
 | 24 | 2026-10-22 | Paralelizar delegações independentes sempre que possível; agent-glue-job e agent-terraform rodam em paralelo | Velocidade nas entregas |
 | 25 | 2026-10-22 | agent-qa e agent-adversarial rodam em sequência; o adversarial revisa também os testes unitários | Testes mockados podem passar sem provar a regra |
 | 26 | 2026-10-22 | Sem hooks adicionais por enquanto; a proibição de comandos destrutivos fica nas instruções dos agents | Priorização |
+| 27 | 2026-10-22 | Padrões aprovados: `jobs/<nome_job>/job.py + transform.py`, Glue 5.0 como padrão, `infra/modules/glue_job` + `infra/jobs/<nome_job>.tf`, `tests/conftest.py` com mocks | Validados pelo usuário |
+| 28 | 2026-10-22 | Sem allowlist de permissões no repo consumidor: todo comando sem permissão é aprovado pelo usuário na hora | Controle humano |
+| 29 | 2026-10-22 | Sem versionamento formal do plugin por enquanto | Priorização |
 
 ## Fatos verificados (2026-10-22, teste headless com `--plugin-dir`)
 
@@ -88,5 +91,5 @@ templates/        bootstrap do repo consumidor (CLAUDE.md, rules/, entregas/)
 
 ## Pendências
 
-- **Aguardando validação do usuário:** padrões propostos nas skills (layout `jobs/<nome_job>/job.py + transform.py`, Glue 5.0 como padrão, layout `infra/modules/glue_job` + `infra/jobs/<nome_job>.tf`, estrutura de `tests/` e `conftest.py` de mocks).
-- README e LICENSE do plugin.
+- Marketplace remoto (próxima etapa): publicar o repo em um remoto git e documentar a instalação para o time.
+- Teste de ponta a ponta de uma entrega completa.
