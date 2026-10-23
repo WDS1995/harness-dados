@@ -1,0 +1,9 @@
+{
+  "entrega": "{{ID}}",
+  "fase": "contrato",
+  "contrato": { "versao": 1, "status": "rascunho" },
+  "tarefas": [],
+  "qa": { "ultima_execucao": null, "passou": null, "cobertura": null },
+  "revisao_adversarial": { "ciclos": 0, "correcoes_pendentes": [] },
+  "atualizado_em": null
+}

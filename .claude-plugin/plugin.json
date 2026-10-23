@@ -1,0 +1,6 @@
+{
+  "name": "harness-dados",
+  "version": "0.1.0",
+  "description": "Harness do Claude Code para Engenharia de Dados: orquestração de Glue Jobs com Terraform, testes unitários e documentação.",
+  "author": { "name": "Wellington Domiciano" }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "harness-dados-marketplace",
+  "owner": { "name": "Wellington Domiciano" },
+  "plugins": [
+    {
+      "name": "harness-dados",
+      "source": ".",
+      "description": "Harness do Claude Code para Engenharia de Dados."
+    }
+  ]
+}
