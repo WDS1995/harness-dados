@@ -14,7 +14,7 @@ Não inicie nenhuma delegação nova. Para cada tarefa `em-andamento` em `estado
 
 ## 2. Coletar registros dos agents
 
-Para cada agent executor que trabalhou nesta sessão (veja `progresso.md`), delegue um pedido curto:
+Para cada agent executor que trabalhou nesta sessão (veja `progresso.md`), delegue um pedido curto. Faça todas essas delegações **em paralelo**, na mesma mensagem:
 
 > "Encerramento da sessão da entrega <ID>. Atualize sua memória de agent com os aprendizados reutilizáveis desta sessão e devolva: (a) decisões técnicas tomadas, (b) pendências e (c) aprendizados candidatos a regra do repo."
 

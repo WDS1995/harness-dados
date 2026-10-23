@@ -66,6 +66,9 @@ Este repositório constrói um **harness reutilizável do Claude Code** para os 
 | 21 | 2026-10-22 | `/iniciar-sessao` e `/encerrar-sessao` são skills (`disable-model-invocation: true`); sem pasta `commands/` | Skills substituem commands |
 | 22 | 2026-10-22 | CLAUDE.md e rules do consumidor são criados por bootstrap a partir de `templates/` | Plugins não distribuem CLAUDE.md nem rules |
 | 23 | 2026-10-22 | Apenas 1 ciclo de correção: se o adversarial reprovar de novo, o usuário decide como seguir | Evitar loops; decisão humana |
+| 24 | 2026-10-22 | Paralelizar delegações independentes sempre que possível; agent-glue-job e agent-terraform rodam em paralelo | Velocidade nas entregas |
+| 25 | 2026-10-22 | agent-qa e agent-adversarial rodam em sequência; o adversarial revisa também os testes unitários | Testes mockados podem passar sem provar a regra |
+| 26 | 2026-10-22 | Sem hooks adicionais por enquanto; a proibição de comandos destrutivos fica nas instruções dos agents | Priorização |
 
 ## Fatos verificados (2026-10-22, teste headless com `--plugin-dir`)
 
@@ -85,5 +88,5 @@ templates/        bootstrap do repo consumidor (CLAUDE.md, rules/, entregas/)
 
 ## Pendências
 
-- Componentes ainda não criados: agent-glue-job + skill-glue-job, agent-terraform + skill-terraform, agent-qa + skill-teste-unitario, agent-adversarial, hook-exec-test, templates de CLAUDE.md e rules do consumidor.
+- **Aguardando validação do usuário:** padrões propostos nas skills (layout `jobs/<nome_job>/job.py + transform.py`, Glue 5.0 como padrão, layout `infra/modules/glue_job` + `infra/jobs/<nome_job>.tf`, estrutura de `tests/` e `conftest.py` de mocks).
 - README e LICENSE do plugin.

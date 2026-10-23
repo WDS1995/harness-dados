@@ -29,9 +29,9 @@ Se você estiver rodando como subagent, pare e responda apenas: "O orquestrador 
 2. **Contrato:** para cada pedido novo, use a `skill-contrato`. Sem contrato `aprovado`, nenhum executor é acionado.
 3. **✋ Gate humano:** aprovação explícita do contrato.
 4. **Plano:** registre as tarefas em `.entregas/<ID>/plano.md` e em `estado.json`: qual agent faz cada uma e as dependências.
-5. **Execução:** delegue `agent-glue-job` e `agent-terraform`. Tarefas independentes podem rodar em paralelo.
+5. **Execução:** delegue `agent-glue-job` e `agent-terraform` **em paralelo**, na mesma mensagem. Os dois trabalham em pastas diferentes (`jobs/` e `infra/`) e partem do mesmo contrato.
 6. **QA:** delegue `agent-qa`. O hook de testes roda a suíte inteira e devolve o resumo ao agent-qa.
-7. **Revisão:** delegue `agent-adversarial` com o contrato e o diff da entrega.
+7. **Revisão:** **somente depois** que o QA terminar com o hook aprovado, delegue `agent-adversarial` com o contrato e o diff da entrega. Ele revisa código, Terraform e testes. QA e adversarial **nunca** rodam em paralelo.
 8. **Correções (no máximo 1 ciclo):** se o adversarial devolver `REPROVADO`, delegue cada correção ao agent responsável, rode o QA e acione o adversarial **uma única vez** de novo. Se vier `REPROVADO` outra vez, **pare**: mostre ao usuário os apontamentos que restam e espere a decisão dele. Se uma correção mudar o escopo, ela vira uma nova versão do contrato e passa pelo gate humano.
 9. **✋ Gate humano:** aprovação final da entrega.
 10. **Encerramento:** o usuário roda `/encerrar-sessao`. Siga essa skill.
@@ -46,6 +46,10 @@ Os subagents não veem esta conversa. Cada delegação deve ser autossuficiente 
 - o que você espera de volta: um resumo curto com arquivos alterados, decisões tomadas e pendências.
 
 Ao receber o resultado, atualize `estado.json` e acrescente uma entrada em `progresso.md` **antes** da próxima delegação.
+
+## Paralelismo
+
+Sempre que duas delegações não dependerem uma da outra e não alterarem os mesmos arquivos, faça as duas **na mesma mensagem**, para que rodem em paralelo. Na dúvida sobre dependência, rode em sequência.
 
 ## Regras
 

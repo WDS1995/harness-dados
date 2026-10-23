@@ -10,19 +10,28 @@ Execute os passos na ordem. Os templates ficam em `../../templates/`, relativo a
 
 ## 1. Bootstrap (só na primeira execução)
 
-Se `.entregas/` não existir no repo:
+Se `.entregas/` não existir no repo, crie os itens abaixo a partir de `templates/`. **Nunca sobrescreva** um arquivo que já exista.
 
-1. Crie `.entregas/`.
-2. Copie `templates/entregas/backlog.md` e `templates/entregas/sessao.json` para `.entregas/`.
-3. Avise o usuário do que foi criado.
+| Origem (`templates/`) | Destino no repo |
+|---|---|
+| `CLAUDE.template.md` | `CLAUDE.md` |
+| `rules/*.md` | `.claude/rules/` |
+| `pyproject.toml` | `pyproject.toml` |
+| `requirements-dev.txt` | `requirements-dev.txt` |
+| `docs/contexto/glossario.md` | `docs/contexto/glossario.md` |
+| `entregas/backlog.md`, `entregas/sessao.json` | `.entregas/` |
 
-Não sobrescreva arquivos que já existam.
+Quando o destino já existir:
+- **`CLAUDE.md`:** mostre ao usuário as seções do template que faltam e pergunte se pode acrescentá-las.
+- **`pyproject.toml`:** verifique se as seções `[tool.pytest.ini_options]` e `[tool.coverage.*]` existem; se faltarem, mostre ao usuário o trecho a incluir.
+
+Ao final, liste para o usuário o que foi criado e lembre que as dependências de teste estão em `requirements-dev.txt`.
 
 ## 2. Registrar a sessão
 
 Atualize `.entregas/sessao.json`: preencha `iniciada_em` com a data e hora atuais e `encerrada_em` com `null`.
 
-Se `encerrada_em` já estiver `null` antes dessa atualização, a sessão anterior não foi encerrada com `/encerrar-sessao`. Avise o usuário e peça ao escriba que trate isso no briefing.
+Se, antes dessa atualização, `iniciada_em` estiver preenchido e `encerrada_em` estiver `null`, a sessão anterior não foi encerrada com `/encerrar-sessao`. Avise o usuário e peça ao escriba que trate isso no briefing.
 
 ## 3. Briefing do escriba
 
@@ -43,5 +52,5 @@ Mostre o briefing ao usuário e pergunte se ele quer **continuar a entrega ativa
 - **Novo pedido:**
   1. Gere o próximo ID no formato `ENT-NNNN`, olhando o backlog.
   2. Crie `.entregas/<ID>-<nome-curto>/` com cópias de `contrato.md`, `plano.md`, `estado.json` e `progresso.md` de `templates/entregas/`.
-  3. Registre a entrega no `backlog.md` e em `entrega_ativa` do `sessao.json`.
+  3. Registre a entrega no `backlog.md` e grave o **nome da pasta** (`<ID>-<nome-curto>`) em `entrega_ativa` do `sessao.json`.
   4. Siga a `skill-contrato`.
