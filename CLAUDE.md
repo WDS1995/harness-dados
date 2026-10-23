@@ -91,5 +91,4 @@ templates/        bootstrap do repo consumidor (CLAUDE.md, rules/, entregas/)
 
 ## Pendências
 
-- Marketplace remoto (próxima etapa): publicar o repo em um remoto git e documentar a instalação para o time.
-- Teste de ponta a ponta de uma entrega completa.
+Ver [BACKLOG.md](BACKLOG.md). Teste de ponta a ponta concluído em 2026-10-22 (entrega sintética `vendas_diarias`); as correções encontradas estão registradas como H-01 a H-07.
