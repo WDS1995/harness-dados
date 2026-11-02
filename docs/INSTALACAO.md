@@ -79,14 +79,12 @@ Deve mostrar **7 skills, 6 agents e 1 hook**. Se estiver com o Claude Code abert
    mkdir meu-repo-de-dados && cd meu-repo-de-dados
    git init
    ```
-
 2. Abra o Claude Code: `claude`
 3. Inicie a sessão:
 
    ```
    /harness-dados:iniciar-sessao
    ```
-
 4. Na primeira vez, o bootstrap cria (sem sobrescrever nada existente):
 
    ```
@@ -101,13 +99,11 @@ Deve mostrar **7 skills, 6 agents e 1 hook**. Se estiver com o Claude Code abert
    ```
 
    Depois o escriba faz o briefing e o orquestrador pergunta se você quer continuar uma entrega ou iniciar um novo pedido.
-
 5. Instale as dependências de teste (em outro terminal, na mesma pasta):
 
    ```bash
    pip install -r requirements-dev.txt
    ```
-
 6. Para terminar o teste:
 
    ```
@@ -116,12 +112,12 @@ Deve mostrar **7 skills, 6 agents e 1 hook**. Se estiver com o Claude Code abert
 
 ## Problemas comuns
 
-| Sintoma | Solução |
-|---|---|
-| `Filename too long` no `marketplace add` (Windows) | `git config --global core.longpaths true` e repita o comando |
-| Os comandos `/harness-dados:...` não aparecem | Reinicie o Claude Code e confira com `claude plugin list` se o plugin está `enabled` |
-| O hook não roda os testes / `pytest` não encontrado | Rode `pip install -r requirements-dev.txt` com o Python que está no PATH |
-| Plugin desatualizado | Veja a seção abaixo e rode o update |
+| Sintoma                                                 | Solução                                                                                 |
+| ------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `Filename too long` no `marketplace add` (Windows)  | `git config --global core.longpaths true` e repita o comando                            |
+| Os comandos `/harness-dados:...` não aparecem        | Reinicie o Claude Code e confira com `claude plugin list` se o plugin está `enabled` |
+| O hook não roda os testes / `pytest` não encontrado | Rode `pip install -r requirements-dev.txt` com o Python que está no PATH               |
+| Plugin desatualizado                                    | Veja a seção abaixo e rode o update                                                     |
 
 ## Atualizar e desinstalar
 
@@ -137,7 +133,7 @@ Pelo terminal:
 claude plugin marketplace update harness-dados-marketplace   # baixa a versão mais nova do repo
 claude plugin update harness-dados                           # atualiza o plugin instalado
 claude plugin uninstall harness-dados                        # remove o plugin
-claude plugin marketplace remove harness-dados-marketplace   # remove o marketplace
+claude plugin marketplace remove harness-dados-marketplace   # remove o marketplace 
 ```
 
 ## Próximo passo
