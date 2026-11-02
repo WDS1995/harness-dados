@@ -1,0 +1,17 @@
+{
+  "executado_em": "2026-10-23T01:48:45+00:00",
+  "aprovado": true,
+  "testes": {
+    "total": 32,
+    "falhas": 0,
+    "erros": 0,
+    "ignorados": 0,
+    "detalhes": []
+  },
+  "cobertura": {
+    "total": 100.0,
+    "abaixo_do_minimo": []
+  },
+  "resumo": "hook-exec-test ✅ | Testes: 32 ok, 0 com falha, 0 ignorados | Cobertura: 100.0% (mínimo 95%)",
+  "saida": "................................                                                                                                 [100%]\n=========================================================== tests coverage ============================================================\n___________________________________________ coverage: platform win32, python 3.11.9-final-0 ___________________________________________\n\nCoverage JSON written to file ./.entregas\\ENT-0001-gluejobsample\\qa\\cobertura.json\nRequired test coverage of 95.0% reached. Total coverage: 100.00%\n32 passed in 0.21s\n"
+}

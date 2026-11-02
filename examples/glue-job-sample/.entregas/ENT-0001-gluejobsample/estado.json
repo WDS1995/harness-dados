@@ -1,0 +1,58 @@
+{
+  "entrega": "ENT-0001",
+  "fase": "concluida",
+  "contrato": {
+    "versao": 2,
+    "status": "concluido"
+  },
+  "tarefas": [
+    {
+      "id": "T1",
+      "agent": "agent-glue-job",
+      "depende_de": [],
+      "status": "concluida"
+    },
+    {
+      "id": "T2",
+      "agent": "agent-terraform",
+      "depende_de": [],
+      "status": "cancelada",
+      "motivo": "Terraform fora de escopo nesta entrega"
+    },
+    {
+      "id": "T3",
+      "agent": "agent-qa",
+      "depende_de": [
+        "T1"
+      ],
+      "status": "concluida"
+    },
+    {
+      "id": "T4",
+      "agent": "agent-adversarial",
+      "depende_de": [
+        "T3"
+      ],
+      "status": "concluida"
+    }
+  ],
+  "qa": {
+    "ultima_execucao": "2026-10-23T01:48:45+00:00",
+    "passou": true,
+    "cobertura": 100.0,
+    "testes": 32
+  },
+  "revisao_adversarial": {
+    "ciclos": 1,
+    "veredito": "APROVADO",
+    "correcoes_pendentes": [],
+    "nao_bloqueantes": 6
+  },
+  "atualizado_em": "2026-10-22T23:07:00-0300",
+  "aprovacao_final": {
+    "por": "Wellington Domiciano",
+    "em": "2026-10-22",
+    "resultado": "aprovado com ressalvas",
+    "validacao": "end-to-end na AWS; tabela consultada no Athena"
+  }
+}

@@ -6,9 +6,11 @@ agent apenas um resumo curto.
 """
 
 import json
+import os
 import subprocess
 import sys
 import xml.etree.ElementTree as ET
+from collections.abc import Mapping
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -16,6 +18,11 @@ AGENT_QA = "harness-dados:agent-qa"
 COBERTURA_MINIMA = 95.0
 TEMPO_LIMITE_SEGUNDOS = 540
 MAX_ITENS_NO_RESUMO = 5
+
+
+def resolver_raiz(evento: dict, env: Mapping) -> Path:
+    """Raiz do repo consumidor: CLAUDE_PROJECT_DIR; sem ela, o cwd do evento."""
+    return Path(env.get("CLAUDE_PROJECT_DIR") or evento.get("cwd") or ".")
 
 
 def pasta_relatorio(raiz: Path) -> Path:
@@ -119,7 +126,7 @@ def main() -> int:
     if not (evento.get("tool_input") or {}).get("file_path", "").endswith(".py"):
         return 0
 
-    raiz = Path(evento.get("cwd") or ".")
+    raiz = resolver_raiz(evento, os.environ)
     destino = pasta_relatorio(raiz)
     destino.mkdir(parents=True, exist_ok=True)
     junit, cobertura_json = destino / "junit.xml", destino / "cobertura.json"

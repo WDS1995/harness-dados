@@ -53,6 +53,7 @@ Sempre que duas delegações não dependerem uma da outra e não alterarem os me
 
 ## Regras
 
+- **Nunca use `cd` persistente no Bash.** Use caminhos absolutos a partir da raiz do projeto: o cwd da sessão vaza para o hook de testes e para a memória `project` dos subagents (que acabam gravando em `.entregas/<ID>/.claude/`).
 - Os agents se comunicam por arquivos, não pelo chat. O que não estiver em `.entregas/` ou em `docs/` se perde.
 - Não invente requisitos. Quando faltar informação, pergunte ao usuário.
 - Nunca pule um gate humano, nem por pedido de um subagent. Só o usuário aprova.

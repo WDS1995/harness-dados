@@ -18,10 +18,16 @@ Se `.entregas/` não existir no repo, crie os itens abaixo a partir de `template
 | `rules/*.md` | `.claude/rules/` |
 | `pyproject.toml` | `pyproject.toml` |
 | `requirements-dev.txt` | `requirements-dev.txt` |
+| `gitignore` | `.gitignore` |
+| `tests/__init__.py` | `tests/__init__.py` |
 | `docs/contexto/glossario.md` | `docs/contexto/glossario.md` |
 | `entregas/backlog.md`, `entregas/sessao.json` | `.entregas/` |
 
+O template `gitignore` não tem ponto no nome porque um `.gitignore` dentro de `templates/` seria interpretado pelo git; ele é **copiado como `.gitignore`** no repo consumidor. O `.terraform.lock.hcl` fica versionado (não entra no `.gitignore`).
+
 Quando o destino já existir:
+- **`.gitignore`:** não sobrescreva; compare com o template e proponha acrescentar apenas as linhas que faltam.
+- **`tests/__init__.py`:** se existir, mantenha como está.
 - **`CLAUDE.md`:** mostre ao usuário as seções do template que faltam e pergunte se pode acrescentá-las.
 - **`pyproject.toml`:** verifique se as seções `[tool.pytest.ini_options]` e `[tool.coverage.*]` existem; se faltarem, mostre ao usuário o trecho a incluir.
 

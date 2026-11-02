@@ -1,0 +1,101 @@
+id_aluno,nome,curso,nota_final,data_matricula
+1001,Diego  ramos ,Estatistica,3,2021-02-21
+1002,GABRIELA rocha,quimica,6,2021-03-30
+1003,joao PEREIRA,  Ciencia da Computacao  ,0,2021-05-06
+1004,  carla dias,FISICA ,7.456,2021-06-12
+1005,fabio nunes  ,  matematica,2.5,2021-07-19
+1006,IRIS campos,Engenharia de Dados,9.1234,2021-08-25
+1007,BRUNO lima,Estatistica,4.25,2021-10-01
+1008,eduarda ALVES,quimica,10,2021-11-07
+1009,  henrique melo,  Ciencia da Computacao  ,6.0,2021-12-14
+1010,ana souza,FISICA ,6.005,2022-01-20
+1011,Diego  ramos ,  matematica,,2022-02-26
+1012,GABRIELA rocha,Engenharia de Dados,8.5,2022-04-04
+1013,joao PEREIRA,Estatistica,3,2022-05-11
+1014,  carla dias,quimica,6,2022-06-17
+1015,fabio nunes  ,  Ciencia da Computacao  ,0,2022-07-24
+1016,IRIS campos,FISICA ,7.456,2022-08-30
+,BRUNO lima,  matematica,2.5,2022-10-06
+1018,eduarda ALVES,Engenharia de Dados,9.1234,2022-11-12
+1019,  henrique melo,Estatistica,4.25,2022-12-19
+1020,ana souza,quimica,10,2023-01-25
+1021,Diego  ramos ,  Ciencia da Computacao  ,6.0,2023-03-03
+1022,GABRIELA rocha,FISICA ,,2023-04-09
+1023,joao PEREIRA,  matematica,5.999,2023-05-16
+1024,  carla dias,Engenharia de Dados,8.5,2023-06-22
+1025,fabio nunes  ,Estatistica,3,2023-07-29
+1026,IRIS campos,quimica,6,2023-09-04
+1027,BRUNO lima,  Ciencia da Computacao  ,0,2023-10-11
+1028,eduarda ALVES,FISICA ,7.456,2023-11-17
+1029,  henrique melo,  matematica,2.5,2023-12-24
+1030,ana souza,Engenharia de Dados,9.1234,2024-01-30
+1031,Diego  ramos ,Estatistica,4.25,2024-03-07
+1032,GABRIELA rocha,quimica,10,2024-04-13
+1033,joao PEREIRA,  Ciencia da Computacao  ,,2024-05-20
+,  carla dias,FISICA ,6.005,2024-06-26
+1035,fabio nunes  ,  matematica,5.999,2024-08-02
+1036,IRIS campos,Engenharia de Dados,8.5,2024-09-08
+1037,BRUNO lima,Estatistica,3,2024-10-15
+1038,eduarda ALVES,quimica,6,2024-11-21
+1039,  henrique melo,  Ciencia da Computacao  ,0,2024-12-28
+1040,ana souza,FISICA ,7.456,2025-02-03
+1041,Diego  ramos ,  matematica,2.5,2021-02-01
+1042,GABRIELA rocha,Engenharia de Dados,9.1234,2021-03-10
+1043,joao PEREIRA,Estatistica,4.25,2021-04-16
+1044,  carla dias,quimica,,2021-05-23
+1045,fabio nunes  ,  Ciencia da Computacao  ,6.0,2021-06-29
+1046,IRIS campos,FISICA ,6.005,2021-08-05
+1047,BRUNO lima,  matematica,5.999,2021-09-11
+1048,eduarda ALVES,Engenharia de Dados,8.5,2021-10-18
+1049,  henrique melo,Estatistica,3,2021-11-24
+1050,ana souza,quimica,6,2021-12-31
+,Diego  ramos ,  Ciencia da Computacao  ,0,2022-02-06
+1052,GABRIELA rocha,FISICA ,7.456,2022-03-15
+1053,joao PEREIRA,  matematica,2.5,2022-04-21
+1054,  carla dias,Engenharia de Dados,9.1234,2022-05-28
+1055,fabio nunes  ,Estatistica,,2022-07-04
+1056,IRIS campos,quimica,10,2022-08-10
+1057,BRUNO lima,  Ciencia da Computacao  ,6.0,2022-09-16
+1058,eduarda ALVES,FISICA ,6.005,2022-10-23
+1059,  henrique melo,  matematica,5.999,2022-11-29
+1060,ana souza,Engenharia de Dados,8.5,2023-01-05
+1061,Diego  ramos ,Estatistica,3,2023-02-11
+1062,GABRIELA rocha,quimica,6,2023-03-20
+1063,joao PEREIRA,  Ciencia da Computacao  ,0,2023-04-26
+1064,  carla dias,FISICA ,7.456,2023-06-02
+1065,fabio nunes  ,  matematica,2.5,2023-07-09
+1066,IRIS campos,Engenharia de Dados,,2023-08-15
+1067,BRUNO lima,Estatistica,4.25,2023-09-21
+,eduarda ALVES,quimica,10,2023-10-28
+1069,  henrique melo,  Ciencia da Computacao  ,6.0,2023-12-04
+1070,ana souza,FISICA ,6.005,2024-01-10
+1071,Diego  ramos ,  matematica,5.999,2024-02-16
+1072,GABRIELA rocha,Engenharia de Dados,8.5,2024-03-24
+1073,joao PEREIRA,Estatistica,3,2024-04-30
+1074,  carla dias,quimica,6,2024-06-06
+1075,fabio nunes  ,  Ciencia da Computacao  ,0,2024-07-13
+1076,IRIS campos,FISICA ,7.456,2024-08-19
+1077,BRUNO lima,  matematica,,2024-09-25
+1078,eduarda ALVES,Engenharia de Dados,9.1234,2024-11-01
+1079,  henrique melo,Estatistica,4.25,2024-12-08
+1080,ana souza,quimica,10,2025-01-14
+1081,Diego  ramos ,  Ciencia da Computacao  ,6.0,2025-02-20
+1082,GABRIELA rocha,FISICA ,6.005,2021-02-18
+1083,joao PEREIRA,  matematica,5.999,2021-03-27
+1084,  carla dias,Engenharia de Dados,8.5,2021-05-03
+,fabio nunes  ,Estatistica,3,2021-06-09
+1086,IRIS campos,quimica,6,2021-07-16
+1087,BRUNO lima,  Ciencia da Computacao  ,0,2021-08-22
+1088,eduarda ALVES,FISICA ,,2021-09-28
+1089,  henrique melo,  matematica,2.5,2021-11-04
+1090,ana souza,Engenharia de Dados,9.1234,2021-12-11
+1091,Diego  ramos ,Estatistica,4.25,2022-01-17
+1092,GABRIELA rocha,quimica,10,2022-02-23
+1093,joao PEREIRA,  Ciencia da Computacao  ,6.0,2022-04-01
+1094,  carla dias,FISICA ,6.005,2022-05-08
+1095,fabio nunes  ,  matematica,5.999,2022-06-14
+1096,IRIS campos,Engenharia de Dados,8.5,2022-07-21
+1097,BRUNO lima,Estatistica,3,2022-08-27
+1098,eduarda ALVES,quimica,6,2022-10-03
+1099,  henrique melo,  Ciencia da Computacao  ,,2022-11-09
+1100,ana souza,FISICA ,7.456,2022-12-16

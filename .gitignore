@@ -1,6 +1,12 @@
 CLAUDE.local.md
 .claude/settings.local.json
 .claude/agent-memory-local/
+**/.claude/agent-memory/
+PROGRESS.md
+
+# Python / testes / terraform
 __pycache__/
 *.pyc
 .coverage
+.pytest_cache/
+.terraform/
