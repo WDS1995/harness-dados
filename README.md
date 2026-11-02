@@ -184,6 +184,12 @@ sequenceDiagram
     CC-->>Aluno: plugin ativo
 ```
 
+> **Windows: erro `Filename too long`?** O plugin é clonado dentro de `C:\Users\<você>\.claude\plugins\` e alguns arquivos do exemplo ficam com caminho longo. Se o `marketplace add` falhar com essa mensagem, habilite caminhos longos no git e rode o comando de novo:
+>
+> ```bash
+> git config --global core.longpaths true
+> ```
+
 ### Alternativa pelo terminal
 
 ```bash
