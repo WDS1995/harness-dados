@@ -2,6 +2,8 @@
 
 Plugin do Claude Code para **Engenharia de Dados**. Ele organiza a criação de **AWS Glue Jobs (PySpark) com Terraform** em um fluxo com contrato de entrega, agents especializados, testes unitários obrigatórios, revisão adversarial e documentação automática. Você instala uma vez, de um marketplace, e usa em qualquer repositório de dados.
 
+> **Só quer instalar e testar?** Siga o [guia de instalação](docs/INSTALACAO.md).
+
 > **Material de aula.** Este repositório acompanha a trilha de Claude Code da plataforma **Ensina Dados** (Prof. Wellington Domiciano · Wbigdata). Ele é um ponto de partida para estudar e adaptar, não um produto com garantias. Revise tudo antes de usar em produção.
 
 ## Sumário
@@ -137,12 +139,15 @@ Regras do fluxo:
 ## Pré-requisitos
 
 - **Claude Code atualizado**, com **auto memory ligada** (os agents usam memória de projeto).
+- **git** instalado (o Claude Code o usa para baixar o plugin do marketplace).
 - **Python 3.11+** no PATH. No repo de dados: `pip install -r requirements-dev.txt` (o arquivo é criado pelo bootstrap).
 - **Terraform** (opcional). Sem ele, a validação do Terraform fica registrada como pendência.
 - **Conta AWS** com permissão para Glue, S3 e Athena (necessário para o [desafio](#-desafio)).
 - **AWS CLI** configurado (para subir arquivos ao S3 e conferir recursos).
 
 ## Instalação passo a passo
+
+Prefere um roteiro curto? Veja o [guia de instalação](docs/INSTALACAO.md).
 
 1. **Adicione o marketplace.** Dentro do Claude Code:
 
@@ -324,6 +329,7 @@ skills/           skills de domínio e de sessão
 hooks/            hooks.json + exec_test.py
 templates/        arquivos criados no repo de dados pelo /iniciar-sessao
 examples/         glue-job-sample: entrega de referência feita em aula
+docs/INSTALACAO.md  guia curto de instalação e teste
 docs/img/         diagrama de arquitetura
 BACKLOG.md        correções e melhorias abertas
 CLAUDE.md         arquitetura e decisões do harness
